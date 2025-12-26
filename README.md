@@ -21,20 +21,3 @@ npm run dev
 - POST /api/contact — Create contact (validates `{ name, email, message? }`)
 
 All responses are JSON. Unknown routes return 404 JSON.
-
-## Example
-
-```bash
-# Dynamic time
-curl http://localhost:4000/api/time
-
-# Echo JSON
-curl -X POST http://localhost:4000/api/echo \
-  -H "Content-Type: application/json" \
-  -d '{"hello":"world"}'
-
-# Contact create (validation)
-curl -X POST http://localhost:4000/api/contact \
-  -H "Content-Type: application/json" \
-  -d '{"name":"Ada","email":"ada@example.com","message":"Hi"}'
-```
